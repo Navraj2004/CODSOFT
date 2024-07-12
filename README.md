@@ -1,3 +1,5 @@
+
+
 #include<iostream>
 using namespace std;
 int main(){
@@ -46,9 +48,7 @@ int main(){
         cout<<"operation is not possible\n";
         break;
 
-         
-
-    }
+          }
     
 return 0;
 }

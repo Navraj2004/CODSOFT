@@ -1,0 +1,33 @@
+#include<iostream>
+#include<time.h>
+using namespace std;
+
+int main()
+{
+    int n, chance;
+    cout << "Guess a number between 1 to 100" << endl;
+    srand(time(0));
+    int randnumber = (rand() % 100) + 1;
+
+    cout << "How many chances do you want (from 1 to 10)?" << endl;
+    cin >> chance;
+
+    for (int i = 0; i < chance; i++)
+    {
+        cout << "Enter your guess: ";
+        cin >> n;
+
+        if (n == randnumber)
+        {
+            cout << "You have successfully guessed the number!" << endl;
+            return 0;
+        }
+        else
+        {
+            cout << "Your guess didn't match. Try again." << endl;
+        }
+    }
+
+    cout << "You've used all your chances. The number was " << randnumber << "." << endl;
+    return 0;
+}
